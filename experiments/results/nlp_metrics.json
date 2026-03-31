@@ -1,0 +1,26 @@
+{
+  "accuracy": 92.85714285714286,
+  "macro_f1": 0.9259259259259259,
+  "confusion_matrix": [
+    [
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      0
+    ],
+    [
+      1,
+      0,
+      4
+    ]
+  ],
+  "labels_order": [
+    "pepper",
+    "potato",
+    "tomato"
+  ]
+}

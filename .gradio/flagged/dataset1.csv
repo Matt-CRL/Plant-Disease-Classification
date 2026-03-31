@@ -1,0 +1,13 @@
+Leaf Image,Prediction,Explanation,Recommendation,Grad-CAM,timestamp
+.gradio\flagged\Leaf Image\fca08f1b36858d63b3c7\tomato-septoria-leaf-spot.png,"Predicted Label: Potato___Early_blight
+Confidence: 0.4170
+RL Decision: REVIEW_NEEDED
+
+Predicted disease: Potato Early Blight with 41.70% confidence.","The leaf shows visible patterns consistent with early blight in potato.
+
+Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment.
+
+Top-3 Predictions:
+- Potato___Early_blight: 0.4170
+- Tomato_Early_blight: 0.3936
+- Pepper__bell___Bacterial_spot: 0.1143",Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment.,.gradio\flagged\Grad-CAM\e8371134d71d558f77fa\image.webp,2026-03-31 16:25:46.403487
