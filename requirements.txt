@@ -1,11 +1,30 @@
+# Core Deep Learning
 torch
 torchvision
+
+# Machine Learning / NLP
 scikit-learn
+joblib
+
+# Data & Math
+numpy
+pandas
+
+# Visualization
 matplotlib
 seaborn
-numpy
+
+# Image Processing
 Pillow
+
+# Config / Utilities
 PyYAML
+
+# Dataset Download
 kagglehub
-joblib
+
+# UI / Demo
 gradio
+
+# Progress bar
+tqdm

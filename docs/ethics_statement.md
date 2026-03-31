@@ -1,7 +1,50 @@
-The use of artificial intelligence in plant disease detection introduces several ethical considerations. One major concern is the possibility of misdiagnosis, which may lead to incorrect treatment decisions and potential economic loss for farmers. To mitigate this risk, the system is intended to serve only as a decision-support tool rather than a replacement for expert agricultural advice.
+# Ethics Statement
 
-Another concern is dataset bias. Since the dataset consists mostly of images captured under controlled conditions, it may not fully represent real-world agricultural environments. This may affect the model’s ability to generalize when applied in practical scenarios.
+## Risks
 
-Additionally, users may develop over-reliance on AI predictions. To address this, it is important to emphasize that the system should be used alongside professional consultation.
+### 1. Misdiagnosis
+The model may incorrectly classify plant diseases, which could lead to improper treatment.
 
-Overall, the system is designed to assist users while maintaining transparency, fairness, and responsible use of artificial intelligence.
+### 2. Over-Reliance on AI
+Users may trust predictions without validation from experts.
+
+### 3. Dataset Bias
+The PlantVillage dataset contains controlled images that may not reflect real-world variability.
+
+---
+
+## Mitigations
+
+- Provide confidence scores for all predictions
+- Use RL decision layer to filter risky predictions
+- Clearly state that the system is assistive only
+
+---
+
+## Intended Use
+- Educational tool
+- Decision-support system for plant disease identification
+
+---
+
+## Limitations
+- Cannot detect internal or chemical plant conditions
+- Performance may decrease in varying lighting or backgrounds
+
+---
+
+## Privacy
+- No personal or sensitive data is collected
+- Dataset contains only plant images
+
+---
+
+## Fairness
+- Model trained on limited dataset
+- May not generalize equally across all plant conditions
+
+---
+
+## Misuse Considerations
+- Should not be used as sole basis for agricultural decisions
+- Not suitable for medical or professional diagnosis
