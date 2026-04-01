@@ -1,0 +1,45 @@
+{
+  "episodes": 1000,
+  "window": 30,
+  "seeds": [
+    42,
+    123,
+    777
+  ],
+  "best_seed": 777,
+  "mean_final_reward": 1.875,
+  "std_final_reward": 0.03402065858244896,
+  "mean_eval_success_rate": 0.989983844911147,
+  "std_eval_success_rate": 0.0004569349151447879,
+  "mean_eval_accept_rate": 0.986214324178783,
+  "std_eval_accept_rate": 0.001980051298960678,
+  "per_seed_metrics": [
+    {
+      "seed": 42,
+      "final_smoothed_reward": 1.8333333333333333,
+      "train_success_rate": 0.944,
+      "train_accept_rate": 0.945,
+      "eval_success_rate": 0.9896607431340873,
+      "eval_accept_rate": 0.9848142164781907,
+      "eval_avg_reward": 1.9649434571890145
+    },
+    {
+      "seed": 123,
+      "final_smoothed_reward": 1.8749999999999998,
+      "train_success_rate": 0.928,
+      "train_accept_rate": 0.923,
+      "eval_success_rate": 0.9896607431340873,
+      "eval_accept_rate": 0.9848142164781907,
+      "eval_avg_reward": 1.9649434571890145
+    },
+    {
+      "seed": 777,
+      "final_smoothed_reward": 1.9166666666666665,
+      "train_success_rate": 0.944,
+      "train_accept_rate": 0.942,
+      "eval_success_rate": 0.9906300484652666,
+      "eval_accept_rate": 0.9890145395799677,
+      "eval_avg_reward": 1.9635702746365105
+    }
+  ]
+}

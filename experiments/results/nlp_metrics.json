@@ -1,0 +1,60 @@
+{
+  "component": "auxiliary_nlp_text_classifier_and_explainer",
+  "task": "plant genus text classification + explanation generation",
+  "classification_metrics": {
+    "accuracy": 92.85714285714286,
+    "macro_f1": 0.9259259259259259,
+    "labels_order": [
+      "pepper",
+      "potato",
+      "tomato"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        0,
+        4
+      ]
+    ],
+    "test_size": 14,
+    "random_state": 42
+  },
+  "cnn_match_metrics": {
+    "accuracy": 100.0,
+    "macro_f1": 1.0,
+    "num_samples": 8
+  },
+  "example_explanations": [
+    {
+      "predicted_label": "Tomato_Early_blight",
+      "confidence": 0.92,
+      "explanation": "Predicted disease: Tomato Early Blight with 92.00% confidence.",
+      "summary": "The leaf has visible signs commonly associated with tomato early blight.",
+      "recommendation": "Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment."
+    },
+    {
+      "predicted_label": "Potato___healthy",
+      "confidence": 0.88,
+      "explanation": "Predicted disease: Healthy Potato with 88.00% confidence.",
+      "summary": "The leaf appears healthy and does not show strong visible disease symptoms.",
+      "recommendation": "Recommendation: The plant appears healthy. Continue regular monitoring and proper care."
+    },
+    {
+      "predicted_label": "Pepper__bell___Bacterial_spot",
+      "confidence": 0.95,
+      "explanation": "Predicted disease: Bell Pepper Bacterial Spot with 95.00% confidence.",
+      "summary": "The leaf shows signs commonly associated with bacterial spot in bell pepper.",
+      "recommendation": "Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment."
+    }
+  ]
+}

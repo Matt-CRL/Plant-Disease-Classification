@@ -1,0 +1,160 @@
+{
+  "question_2_summary": {
+    "vision_non_dl_baseline": {
+      "missing": true,
+      "path": "experiments/results/logreg_val_metrics.json"
+    },
+    "vision_scratch_cnn": {
+      "accuracy": 91.92245557350566,
+      "macro_f1": 0.900909198413467,
+      "classes": [
+        "Pepper__bell___Bacterial_spot",
+        "Pepper__bell___healthy",
+        "Potato___Early_blight",
+        "Potato___Late_blight",
+        "Potato___healthy",
+        "Tomato_Bacterial_spot",
+        "Tomato_Early_blight",
+        "Tomato_Late_blight",
+        "Tomato_Leaf_Mold",
+        "Tomato_Septoria_leaf_spot",
+        "Tomato_Spider_mites_Two_spotted_spider_mite",
+        "Tomato__Target_Spot",
+        "Tomato__Tomato_YellowLeaf__Curl_Virus",
+        "Tomato__Tomato_mosaic_virus",
+        "Tomato_healthy"
+      ]
+    },
+    "vision_mobilenetv3": {
+      "accuracy": 99.32148626817448,
+      "macro_f1": 0.9918718146648667,
+      "classes": [
+        "Pepper__bell___Bacterial_spot",
+        "Pepper__bell___healthy",
+        "Potato___Early_blight",
+        "Potato___Late_blight",
+        "Potato___healthy",
+        "Tomato_Bacterial_spot",
+        "Tomato_Early_blight",
+        "Tomato_Late_blight",
+        "Tomato_Leaf_Mold",
+        "Tomato_Septoria_leaf_spot",
+        "Tomato_Spider_mites_Two_spotted_spider_mite",
+        "Tomato__Target_Spot",
+        "Tomato__Tomato_YellowLeaf__Curl_Virus",
+        "Tomato__Tomato_mosaic_virus",
+        "Tomato_healthy"
+      ]
+    },
+    "nlp_component": {
+      "component": "auxiliary_nlp_text_classifier_and_explainer",
+      "task": "plant genus text classification + explanation generation",
+      "classification_metrics": {
+        "accuracy": 92.85714285714286,
+        "macro_f1": 0.9259259259259259,
+        "labels_order": [
+          "pepper",
+          "potato",
+          "tomato"
+        ],
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "test_size": 14,
+        "random_state": 42
+      },
+      "cnn_match_metrics": {
+        "accuracy": 100.0,
+        "macro_f1": 1.0,
+        "num_samples": 8
+      },
+      "example_explanations": [
+        {
+          "predicted_label": "Tomato_Early_blight",
+          "confidence": 0.92,
+          "explanation": "Predicted disease: Tomato Early Blight with 92.00% confidence.",
+          "summary": "The leaf has visible signs commonly associated with tomato early blight.",
+          "recommendation": "Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment."
+        },
+        {
+          "predicted_label": "Potato___healthy",
+          "confidence": 0.88,
+          "explanation": "Predicted disease: Healthy Potato with 88.00% confidence.",
+          "summary": "The leaf appears healthy and does not show strong visible disease symptoms.",
+          "recommendation": "Recommendation: The plant appears healthy. Continue regular monitoring and proper care."
+        },
+        {
+          "predicted_label": "Pepper__bell___Bacterial_spot",
+          "confidence": 0.95,
+          "explanation": "Predicted disease: Bell Pepper Bacterial Spot with 95.00% confidence.",
+          "summary": "The leaf shows signs commonly associated with bacterial spot in bell pepper.",
+          "recommendation": "Recommendation: This result should be used as decision support only. Consider checking the plant further or consulting an agricultural expert before treatment."
+        }
+      ]
+    },
+    "rl_component": {
+      "episodes": 1000,
+      "window": 30,
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "best_seed": 777,
+      "mean_final_reward": 1.875,
+      "std_final_reward": 0.03402065858244896,
+      "mean_eval_success_rate": 0.989983844911147,
+      "std_eval_success_rate": 0.0004569349151447879,
+      "mean_eval_accept_rate": 0.986214324178783,
+      "std_eval_accept_rate": 0.001980051298960678,
+      "per_seed_metrics": [
+        {
+          "seed": 42,
+          "final_smoothed_reward": 1.8333333333333333,
+          "train_success_rate": 0.944,
+          "train_accept_rate": 0.945,
+          "eval_success_rate": 0.9896607431340873,
+          "eval_accept_rate": 0.9848142164781907,
+          "eval_avg_reward": 1.9649434571890145
+        },
+        {
+          "seed": 123,
+          "final_smoothed_reward": 1.8749999999999998,
+          "train_success_rate": 0.928,
+          "train_accept_rate": 0.923,
+          "eval_success_rate": 0.9896607431340873,
+          "eval_accept_rate": 0.9848142164781907,
+          "eval_avg_reward": 1.9649434571890145
+        },
+        {
+          "seed": 777,
+          "final_smoothed_reward": 1.9166666666666665,
+          "train_success_rate": 0.944,
+          "train_accept_rate": 0.942,
+          "eval_success_rate": 0.9906300484652666,
+          "eval_accept_rate": 0.9890145395799677,
+          "eval_avg_reward": 1.9635702746365105
+        }
+      ]
+    },
+    "pipeline_runtime": {
+      "total_runtime_seconds": 847,
+      "total_runtime_minutes": 14.12,
+      "within_90_min_limit": true
+    }
+  }
+}

@@ -1,23 +1,60 @@
-Dataset:
-PlantVillage Dataset (subset of 1,000 images)
 
-Input:
-RGB images of plant leaves
+---
 
-Output:
-Predicted plant disease class
+# 📄 2. Model Card
 
-Model:
-Convolutional Neural Network (CNN – MobileNetV3)
+```md
+# Plant Disease Classification System
 
-Intended Use:
-To assist in identifying plant diseases based on leaf images
+## Model Overview
+This system combines:
+- CNN (MobileNetV3) for image classification
+- NLP module for plant-genus classification and explanation
+- RL agent for decision thresholding
 
-Limitations:
-- Images are taken under controlled conditions
-- May not generalize well to real-world environments
-- Limited number of classes used in this study
+## Intended Use
+- Assist users in identifying plant diseases
+- Educational and decision-support tool
+- NOT for professional agricultural diagnosis
 
-Bias Risks:
-- Dataset may not represent all environmental conditions
-- Lighting and background differences may affect predictions
+## Dataset
+- PlantVillage dataset (Kaggle)
+- 15 plant disease classes
+- Images of plant leaves under controlled conditions
+
+## Metrics
+
+### Vision Models
+| Model | Accuracy | Macro-F1 |
+|------|--------|---------|
+| Logistic Regression | 68.27% | 0.6406 |
+| Scratch CNN | 91.92% | 0.9009 |
+| MobileNetV3 | 99.32% | 0.9919 |
+
+### NLP
+- Accuracy: 92.86%
+- Macro-F1: 0.9259
+
+### RL
+- Mean success rate: ~0.99
+- 3-seed training for stability
+
+## Evaluation
+- Confusion matrices available in `experiments/results/`
+- Ablation studies included (learning rate variations)
+
+## Limitations
+- May not generalize to real-world environments
+- Cannot detect unseen diseases
+- Limited to known plant disease classes
+- Sensitive to image quality and lighting
+
+## Ethical Considerations
+- Predictions may be incorrect
+- Should not replace expert advice
+- Users must interpret results cautiously
+
+## Deployment
+- Runs locally using PyTorch
+- Designed for local inference using PyTorch
+- Full pipeline reproducible via `run.sh`
